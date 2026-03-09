@@ -12,7 +12,7 @@ Then run
 ```
 python main.py subtitle_file
 ```
-for a default output location of Desktop, and
+for a default output location of Desktop, or
 ```
 python main.py subtitle_file output_loc
 ```
