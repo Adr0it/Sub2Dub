@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 
 # Piper Model
-MODEL = "clean100.onnx"
+MODEL = "en_US-libritts-high.onnx"
 
 tts_queue = queue.PriorityQueue()
 clips = []
@@ -36,7 +36,7 @@ def generate_tts(text):
 
     # Can change Piper model's parameters for different voiceover
     subprocess.run(
-        ["piper", "--model", MODEL, "--speaker", str(72), "--length_scale", str(0.95), "--noise_scale", str(0.5), "--noise_w", str(0.7), "--output_file", temp.name],
+        ["piper", "--model", MODEL, "--speaker", str(473), "--length_scale", str(0.95), "--noise_scale", str(0.5), "--noise_w", str(0.7), "--output_file", temp.name],
         input=text.encode(),
     )
     return temp.name
