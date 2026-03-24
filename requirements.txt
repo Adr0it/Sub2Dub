@@ -2,3 +2,4 @@ numpy==2.4.3
 soundfile==0.13.1
 webvtt_py==0.5.1
 piper-tts
+pathvalidate
