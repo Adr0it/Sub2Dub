@@ -100,7 +100,7 @@ def build_final_audio(output_loc):
     sf.write(output_loc, final_audio, samplerate)
     print(f"Final audio written: {output_loc}")
 
-def run(subtitle_file, output_loc = Path.home() / "OneDrive" / "Desktop" / "out.wav"):
+def run(subtitle_file, output_loc = Path.home() / "Desktop" / "out.wav"):
     producer_thread = threading.Thread(target=producer, args=(subtitle_file,))
     consumer_thread = threading.Thread(target=consumer, daemon=True)
 
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "output_loc",
         nargs="?",
-        default=Path.home() / "OneDrive" / "Desktop" / "out.wav",
+        default=Path.home() / "Desktop" / "out.wav",
         help="Output audio file (default: Desktop/out.wav)"
     )
     args = parser.parse_args()
